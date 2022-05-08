@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5438/postgres
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: postgres
+    hikari:
+      connection-timeout: 20000
+      idle-timeout: 30000
+      maximum-pool-size: 20
+      max-lifetime: 1200000
+      minimum-idle: 5
+      auto-commit: true
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+        default_schema: customers
+  flyway:
+    schemas: customers
+server:
+  servlet:
+    context-path: /api
