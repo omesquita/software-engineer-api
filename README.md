@@ -2,14 +2,10 @@
 
 Este micro serviço foi construido usando o sdk tools do sprint boot
 
-## Arquitetura
-
-O projeto foi desenhado seguindo os padrões do SOLID e Clean Architecture.
-
 ### Endpoins
 
-A API tem um endpoint base configurado na aplicação que começa com `/api` e qualquer endpoint novo que for adicionado
-vai ter este prefixo. Tem num total de quatro **endpoints**:
+A API é feita usando como base os conceitos de RESTFULL APIs. 
+Ela tem um endpoint base configurado na aplicação que começa com `/api` e qualquer endpoint novo que for adicionado vai ter este prefixo. Tem num total de quatro **endpoints**:
 
 1. **GET /customers**
 
@@ -53,6 +49,11 @@ vai ter este prefixo. Tem num total de quatro **endpoints**:
    ```
    api/customers/cbe2bd1a-48b3-4388-80ba-fbc6c4091897
    ```
+
+## Arquitetura
+
+O projeto foi desenhado seguindo os padrões do SOLID e Clean Architecture.  
+A injeção de dependência é feita pelo proprio framework Spring, o que permite trabalharmaos bem o princípio da inversão de dependência.
 
 ### Camadas
 
