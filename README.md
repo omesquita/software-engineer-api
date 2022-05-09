@@ -12,11 +12,13 @@ A API tem um endpoint base configurado na aplicação que começa com `/api` e q
 vai ter este prefixo. Tem num total de quatro **endpoints**:
 
 1. **GET /customers**
+
    Endpoit utilizado para buscar todos os usuários da API.
    ```
    api/customers
    ```
 2. **GET /customers/useridentifier**
+
    Busca um cliente informando um ID por parametro.
    ```
    api/customers/cbe2bd1a-48b3-4388-80ba-fbc6c4091897
@@ -32,6 +34,7 @@ vai ter este prefixo. Tem num total de quatro **endpoints**:
     }
    ```
 3. **POST /customers**
+
    Cria um novo cliente passando os dados via json.
    ```
    api/customers
@@ -45,6 +48,7 @@ vai ter este prefixo. Tem num total de quatro **endpoints**:
     ```
 
 4. **DELETE /customers/useridentifier**
+
    Faz a exclusão de um Customer informando o ID dele por parametro.
    ```
    api/customers/cbe2bd1a-48b3-4388-80ba-fbc6c4091897
