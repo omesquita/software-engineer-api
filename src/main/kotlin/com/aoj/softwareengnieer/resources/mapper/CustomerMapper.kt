@@ -5,6 +5,7 @@ import com.aoj.softwareengnieer.resources.response.CustomerResponse
 import com.aoj.softwareengnieer.utils.DateTimeUtils
 
 fun CustomerEntity.toResponse() = CustomerResponse(
+    id = id,
     name = name,
     city = city,
     createdAt = createdAt.format(DateTimeUtils.dateFormat)
