@@ -84,6 +84,15 @@ Separamos em camada de **dados**, **dominio**, **controller**.
     - Camada onde fica os controllers responsáveis por expor a api para o mundo, fazendo a conexão do cliente que vai
       consumir a api com as regras de negócio (os `UseCases`).
 
+## Representação da comunicação entre classes e camadas. 
+```mermaid
+graph TB;
+   controller("CustomerController") --> usecase("CustomerUseCase");
+   usecase("CustomerUseCase") --> controller("CustomerController");
+   usecase("CustomerUseCase") --> repository("CustomerRepository");
+   repository("CustomerRepository") --> usecase("CustomerUseCase");
+```
+
 ## Tecnologias Utilizada
 
 - [Spring Boot](https://spring.io/projects/spring-boot)
